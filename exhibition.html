@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exhibition | The Other Speaks</title>
+    <meta name="description" content="The exhibition for The Other Speaks.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <style>
+    :root {
+        --black: #000;
+        --ash: #cfc8b8;
+        --bone: #e8e1d0;
+        --slate: #7d8b92;
+        --blood: #7a1f1f;
+        --candle: #b5935a;
+        --blackletter: "UnifrakturCook", "Old English Text MT", "Luminari", serif;
+        --serif: "IM Fell English", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0
+    }
+
+    html {
+        scroll-behavior: smooth;
+        background: var(--black)
+    }
+
+    body {
+        background: var(--black);
+        color: var(--ash);
+        font-family: var(--serif);
+        font-size: 1.2rem;
+        line-height: 1.75;
+        min-height: 100vh;
+        overflow-x: hidden
+    }
+
+    a {
+        color: var(--bone);
+        text-decoration: underline;
+        text-decoration-color: var(--blood);
+        text-underline-offset: .28em;
+        text-decoration-thickness: 1px;
+        transition: color .3s, text-decoration-color .3s
+    }
+
+    a:hover, a:focus-visible {
+        color: #fff;
+        text-decoration-color: var(--candle)
+    }
+
+    a:focus-visible {
+        outline: 1px solid var(--candle);
+        outline-offset: 4px
+    }
+
+    .wrap {
+        max-width: 46rem;
+        margin: 0 auto;
+        padding: 0 1.5rem
+    }/* navigation bar */
+    header {
+        padding: 1.6rem 0
+    }
+
+    header .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: .8rem 1.6rem;
+        flex-wrap: wrap
+    }
+
+    .mark {
+        font-family: var(--blackletter);
+        font-size: 1.4rem;
+        text-decoration: none
+    }
+
+    nav {
+        display: flex;
+        gap: 1.6rem;
+        font-style: italic;
+        flex-wrap: wrap
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--slate);
+        padding-bottom: .1rem;
+        border-bottom: 1px solid transparent
+    }
+
+    nav a:hover, nav a:focus-visible {
+        color: var(--bone)
+    }
+
+    nav a[aria-current="page"] {
+        color: var(--bone);
+        border-bottom-color: var(--blood)
+    }/* home hero */
+    .hero {
+        position: relative;
+        text-align: center;
+        padding: 4.5rem 1.5rem 6rem;
+        overflow: hidden
+    }
+
+    .moon {
+        width: min(13rem, 48vw);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        margin: 0 auto 2.4rem;
+        position: relative;
+        opacity: 0;
+        animation: rise 3.2s ease-out .3s forwards;
+        background: radial-gradient(circle at 38% 36%, #e6e0d0 0%, #aaa594 38%, #5e6064 72%, #1a1b1d 100%);
+        box-shadow: 0 0 90px 10px rgba(180, 175, 160, .16)
+    }
+
+    .moon::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: radial-gradient(circle at 62% 30%, rgba(0, 0, 0, .22) 0 7%, transparent 8%), radial-gradient(circle at 34% 62%, rgba(0, 0, 0, .2) 0 10%, transparent 11%), radial-gradient(circle at 70% 68%, rgba(0, 0, 0, .16) 0 5%, transparent 6%)
+    }
+
+    .branches {
+        position: absolute;
+        left: 50%;
+        top: 4.2rem;
+        width: min(30rem, 95vw);
+        transform: translateX(-50%);
+        pointer-events: none
+    }
+
+    @keyframes rise {
+        from {
+            opacity: 0;
+            transform:translateY(16px)
+        }
+
+        to {
+            opacity: 1;
+            transform: none
+        }
+    }
+
+    h1 {
+        font-family: var(--blackletter);
+        font-weight: 700;
+        font-size: clamp(3rem, 10vw, 5.6rem);
+        line-height: 1.05;
+        color: var(--bone);
+        text-shadow: 0 0 28px rgba(122, 31, 31, .55)
+    }
+
+    .hero h1 {
+        opacity: 0;
+        animation: rise 2.4s ease-out 1.4s forwards
+    }
+
+    .tag {
+        margin: 1.4rem auto 0;
+        max-width: 34rem;
+        font-style: italic;
+        color: var(--slate);
+        font-size: 1.25rem;
+        opacity: 0;
+        animation: rise 2.4s ease-out 2.2s forwards
+    }
+
+    .byline {
+        margin-top: 1.2rem;
+        font-size: 1rem;
+        color: var(--slate);
+        opacity: 0;
+        animation: rise 2.4s ease-out 2.8s forwards
+    }/* interior page title */
+    .page-head {
+        text-align: center;
+        padding: 3.5rem 1.5rem 3rem
+    }
+
+    .page-head h1 {
+        font-size: clamp(2.6rem, 8vw, 4.2rem)
+    }
+
+    .page-head p {
+        margin: 1rem auto 0;
+        max-width: 34rem;
+        font-style: italic;
+        color: var(--slate);
+        font-size: 1.2rem
+    }
+
+    .rule {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 auto;
+        max-width: 46rem;
+        padding: 0 1.5rem;
+        color: var(--blood)
+    }
+
+    .rule::before, .rule::after {
+        content: "";
+        flex: 1;
+        border-top: 1px solid #3a1515;
+        border-bottom: 1px solid #3a1515;
+        padding-top: 3px
+    }
+
+    .rule svg {
+        width: 2.4rem;
+        height: auto;
+        flex: none
+    }
+
+    section {
+        padding: 4rem 0
+    }
+
+    h2 {
+        font-family: var(--blackletter);
+        font-weight: 700;
+        font-size: 2.4rem;
+        color: var(--bone);
+        line-height: 1.15;
+        margin-bottom: 1.4rem
+    }
+
+    h3 {
+        font-family: var(--blackletter);
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: var(--bone);
+        line-height: 1.2;
+        margin: 2.8rem 0 0
+    }
+
+    h3:first-of-type {
+        margin-top: 0
+    }
+
+    p + p {
+        margin-top: 1.1rem
+    }
+
+    .drop::first-letter {
+        font-family: var(--blackletter);
+        color: var(--blood);
+        float: left;
+        font-size: 4.6rem;
+        line-height: .82;
+        padding: .35rem .6rem 0 0
+    }
+
+    blockquote {
+        margin: 2.2rem 0 0;
+        padding-left: 1.4rem;
+        border-left: 2px solid var(--blood);
+        font-style: italic;
+        font-size: 1.3rem;
+        color: var(--bone);
+        line-height: 1.6
+    }
+
+    .next {
+        margin-top: 2.6rem;
+        font-style: italic
+    }/* reading list */
+    .books {
+        list-style: none;
+        margin-top: 1rem;
+        border-top: 1px solid #2a2a2a
+    }
+
+    .books li {
+        padding: 1.8rem .2rem;
+        border-bottom: 1px solid #2a2a2a;
+        transition: background .4s
+    }
+
+    .books li:hover {
+        background: linear-gradient(90deg, rgba(122, 31, 31, .2), transparent 70%)
+    }
+
+    .title {
+        display: block;
+        font-family: var(--blackletter);
+        font-size: 1.7rem;
+        line-height: 1.2;
+        color: var(--bone)
+    }
+
+    .by {
+        display: block;
+        margin-top: .15rem;
+        font-style: italic;
+        color: var(--slate);
+        font-size: 1.05rem
+    }
+
+    .books p {
+        font-size: 1.08rem;
+        line-height: 1.65;
+        margin-top: .9rem
+    }
+
+    .books .focus {
+        margin-top: .6rem;
+        color: var(--bone)
+    }
+
+    .books .focus em {
+        color: var(--slate)
+    }
+
+    .cite {
+        margin-top: .9rem;
+        font-size: .9rem;
+        line-height: 1.5;
+        color: var(--slate)
+    }
+
+    footer {
+        padding: 3rem 0 4rem;
+        text-align: center;
+        color: var(--slate);
+        font-style: italic;
+        font-size: 1rem
+    }
+
+    @media (max-width: 700px) {
+        body {
+            font-size:1.1rem
+        }
+
+        .hero {
+            padding-top:3.5rem
+        }
+
+        .page-head {
+            padding-top: 2.5rem
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation: none !important;
+            transition: none !important
+        }
+
+        .moon, .hero h1, .tag, .byline {
+            opacity: 1
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="wrap">
+            <a class="mark" href="index.html">The Other Speaks</a>
+            <nav aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="purpose.html">Statement of purpose</a>
+                <a href="books.html">The books</a>
+                <a href="exhibition.html" aria-current="page">Exhibition</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-head">
+            <h1>Exhibition</h1>
+        </div>
+
+        <div class="rule" aria-hidden="true">
+            <svg viewBox="0 0 40 24" fill="currentColor">
+                <path d="M20 2 L24 12 L20 22 L16 12 Z"/>
+                <path d="M0 12 H12 M28 12 H40" stroke="currentColor" fill="none"/>
+            </svg>
+        </div>
+
+        <section>
+            <div class="wrap">
+                <!-- Exhibition content goes here. Replace this paragraph. -->
+                <p>Exhibition content goes here.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">Created for Ethnic Librarianship. Content genre: Gothic and Gothic horror literature.</div>
+    </footer>
+
+</body>
+</html>
