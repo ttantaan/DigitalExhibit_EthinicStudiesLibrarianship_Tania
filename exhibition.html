@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Exhibition | The Other Speaks</title>
-    <meta name="description" content="The exhibition for The Other Speaks.">
+    <meta name="description" content="Paintings in two sections: The Other Described and The Other Speaks.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
@@ -363,6 +363,97 @@
         .moon, .hero h1, .tag, .byline {
             opacity: 1
         }
+    }/* exhibition gallery */
+    .wide {
+        max-width: 62rem
+    }
+
+    .sec-label {
+        display: block;
+        font-family: var(--serif);
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.05rem;
+        color: var(--slate);
+        margin-bottom: .2rem
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+        gap: 3.2rem 2.6rem;
+        margin-top: 2.4rem
+    }
+
+    .piece {
+        margin: 0
+    }
+
+    .imgbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 24rem;
+        padding: .8rem;
+        background: #050505;
+        border: 1px solid #4a3a2a;
+        outline: 1px solid #2a1f16;
+        outline-offset: 6px;
+        text-decoration: none
+    }
+
+    .imgbox:focus-visible {
+        outline-color: var(--candle)
+    }
+
+    .imgbox img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain
+    }
+
+    figcaption {
+        margin-top: 1.4rem
+    }
+
+    figcaption span {
+        display: block
+    }
+
+    .artist {
+        font-family: var(--blackletter);
+        font-size: 1.5rem;
+        line-height: 1.2;
+        color: var(--bone)
+    }
+
+    .life {
+        font-style: italic;
+        font-size: 1rem;
+        color: var(--slate)
+    }
+
+    .work {
+        margin-top: .5rem;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: var(--bone)
+    }
+
+    .meta {
+        font-size: .98rem;
+        line-height: 1.5
+    }
+
+    .tbc {
+        color: var(--candle)
+    }
+
+    @media (max-width: 700px) {
+        .imgbox {
+            height: 20rem
+        }
     }
     </style>
 </head>
@@ -393,9 +484,283 @@
         </div>
 
         <section>
-            <div class="wrap">
-                <!-- Exhibition content goes here. Replace this paragraph. -->
-                <p>Exhibition content goes here.</p>
+            <div class="wrap wide">
+                <h2>
+                    <span class="sec-label">Section 1</span>
+                    The Other Described
+                </h2>
+                <!-- Optional: add an introduction to this section here. -->
+                <div class="gallery">
+                    <figure class="piece">
+                        <a class="imgbox" href="images/TheNightmare.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of The Nightmare">
+                            <img src="images/TheNightmare.jpg" alt="A woman in a white gown lies draped backward across a bed, a small dark creature crouching on her chest, while a horse’s head looms through red curtains." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">Henry Fuseli</span>
+                            <span class="life">1741 to 1825, Switzerland</span>
+                            <span class="work">
+                                <em>The Nightmare</em>
+                                , 1781
+                            </span>
+                            <span class="meta">Oil on canvas</span>
+                            <span class="meta">
+                                <span class="tbc">[dimensions]</span>
+                            </span>
+                            <span class="meta">
+                                Collection of 
+                                <span class="tbc">[museum; Fuseli painted several versions, so confirm which one you use]</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <figure class="piece">
+                        <a class="imgbox" href="images/3rdOfMay.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of The 3rd of May 1808 in Madrid">
+                            <img src="images/3rdOfMay.jpg" alt="At night, a line of soldiers aims rifles at a group of civilians. A man in a white shirt and yellow trousers raises his arms before the firing squad, and bloodied bodies lie in the foreground." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">Francisco Goya</span>
+                            <span class="life">1746 to 1828, Spain</span>
+                            <span class="work">
+                                <em>The 3rd of May 1808 in Madrid</em>
+                                , or “The Executions,” 1814
+                            </span>
+                            <span class="meta">Oil on canvas</span>
+                            <span class="meta">
+                                <span class="tbc">[dimensions]</span>
+                            </span>
+                            <span class="meta">Collection of the Museo Nacional del Prado</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="piece">
+                        <a class="imgbox" href="images/TheLady.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of The Lady of Shalott">
+                            <img src="images/TheLady.jpg" alt="A woman in a pale gown lies in a small boat on a still river beneath an amber and red sky, with dark trees along the far bank." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">John Atkinson Grimshaw</span>
+                            <span class="life">1836 to 1893, England</span>
+                            <span class="work">
+                                <em>The Lady of Shalott</em>
+                                , 1878
+                            </span>
+                            <span class="meta">
+                                Oil on 
+                                <span class="tbc">[support]</span>
+                            </span>
+                            <span class="meta">
+                                <span class="tbc">[dimensions]</span>
+                            </span>
+                            <span class="meta">
+                                Collection of 
+                                <span class="tbc">[museum]</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <figure class="piece">
+                        <a class="imgbox" href="images/LeVisionnaire.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of Le Visionnaire (The Visionary)">
+                            <img src="images/LeVisionnaire.jpg" alt="A sepia drawing of a man in a long coat who covers his face with one hand while a pale, ghostlike woman stands at a table and holds out a small round object." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">Serafino Macchiati</span>
+                            <span class="life">1860 to 1916, Italy</span>
+                            <span class="work">
+                                <em>Le Visionnaire</em>
+                                 (The Visionary), 1904
+                            </span>
+                            <span class="meta">Oil on canvas</span>
+                            <span class="meta">55.0 x 38.5 cm</span>
+                            <span class="meta">Collection of the Musée d’Orsay</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <div class="rule" aria-hidden="true">
+            <svg viewBox="0 0 40 24" fill="currentColor">
+                <path d="M20 2 L24 12 L20 22 L16 12 Z"/>
+                <path d="M0 12 H12 M28 12 H40" stroke="currentColor" fill="none"/>
+            </svg>
+        </div>
+
+        <section>
+            <div class="wrap wide">
+                <h2>
+                    <span class="sec-label">Section 2</span>
+                    The Other Speaks
+                </h2>
+                <!-- Optional: add an introduction to this section here. -->
+                <div class="gallery">
+                    <figure class="piece">
+                        <a class="imgbox" href="images/TwoFridas.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of The Two Fridas">
+                            <img src="images/TwoFridas.jpg" alt="Two seated women hold hands under a stormy sky. One wears a white lace dress and the other a blue and brown outfit, and their exposed hearts are joined by a single vein." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">Frida Kahlo</span>
+                            <span class="life">1907 to 1954, Mexico</span>
+                            <span class="work">
+                                <em>The Two Fridas</em>
+                                , 1939
+                            </span>
+                            <span class="meta">Oil on canvas</span>
+                            <span class="meta">
+                                <span class="tbc">[dimensions]</span>
+                            </span>
+                            <span class="meta">
+                                Collection of 
+                                <span class="tbc">[museum]</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <figure class="piece">
+                        <a class="imgbox" href="images/LaVidaYLaMuerte.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of La Vida y la Muerte (Life and Death)">
+                            <img src="images/LaVidaYLaMuerte.jpg" alt="A large mural of a red mask-like face topped by two hands and flames, with an ear of corn at its center, framed by green serpents against a blue ground." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">Francisco Eppens Helguera</span>
+                            <span class="life">
+                                <span class="tbc">[1913 to 1990]</span>
+                                , Mexico
+                            </span>
+                            <span class="work">
+                                <em>La Vida y la Muerte</em>
+                                 (Life and Death), 1953
+                            </span>
+                            <span class="meta">
+                                <span class="tbc">[Medium]</span>
+                            </span>
+                            <span class="meta">
+                                <span class="tbc">[dimensions]</span>
+                            </span>
+                            <span class="meta">
+                                Collection of 
+                                <span class="tbc">[museum]</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <figure class="piece">
+                        <a class="imgbox" href="images/MardiGrasAuFort.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of Mardi Gras au Fort Dimanche">
+                            <img src="images/MardiGrasAuFort.jpg" alt="A bride in a white gown stands at the center of a group of figures in black mourning clothes, clerical robes, and a military uniform, in a green room with torn walls and a barred window, inside a heavy gray frame." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">Edouard Duval-Carrié</span>
+                            <span class="life">b. 1954, Haiti</span>
+                            <span class="work">
+                                <em>Mardi Gras au Fort Dimanche</em>
+                                , 1992 to 1993
+                            </span>
+                            <span class="meta">Oil on canvas</span>
+                            <span class="meta">59.0625 x 59.0625 in.</span>
+                            <span class="meta">Collection of The Bass</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="piece">
+                        <a class="imgbox" href="images/FisherRiver.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of The Scream">
+                            <img src="images/FisherRiver.jpg" alt="Priests, nuns, and red-coated Mounties pull Indigenous children from their mothers in front of a small house under a cloudy sky." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">Kent Monkman</span>
+                            <span class="life">
+                                b. 
+                                <span class="tbc">[1965]</span>
+                                , Canada (Fisher River Cree Nation)
+                            </span>
+                            <span class="work">
+                                <em>The Scream</em>
+                                , 2017
+                            </span>
+                            <span class="meta">Acrylic on canvas</span>
+                            <span class="meta">84 x 132 in.</span>
+                            <span class="meta">Collection of the Denver Art Museum</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="piece">
+                        <a class="imgbox" href="images/Gorta.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of Gorta (previously Burying the Child)">
+                            <img src="images/Gorta.jpg" alt="Three gaunt, blue-green figures in a barren field. Two bend over a shovel and a bundle while a third crouches beside them." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">Lilian Lucy Davidson</span>
+                            <span class="life">1879 to 1954, Ireland</span>
+                            <span class="work">
+                                <em>Gorta</em>
+                                 (previously 
+                                <em>Burying the Child</em>
+                                ), 1946
+                            </span>
+                            <span class="meta">Oil on canvas</span>
+                            <span class="meta">27.5 x 35.5 in.</span>
+                            <span class="meta">Collection of Ireland’s Great Hunger Museum at Quinnipiac University (on loan)</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="piece">
+                        <a class="imgbox" href="images/BehindTheMyth.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of Behind the Myth of Benevolence">
+                            <img src="images/BehindTheMyth.jpg" alt="A Black woman in a head wrap looks out from behind a painted canvas that has been pulled aside to reveal a portrait of a white-haired man in dark clothing." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">Titus Kaphar</span>
+                            <span class="life">
+                                b. 
+                                <span class="tbc">[1976]</span>
+                                , United States
+                            </span>
+                            <span class="work">
+                                <em>Behind the Myth of Benevolence</em>
+                                , 2014
+                            </span>
+                            <span class="meta">Oil on canvas</span>
+                            <span class="meta">59 x 34 x 7 in.</span>
+                            <span class="meta">
+                                Collection of 
+                                <span class="tbc">[museum or private collection; confirm on kapharstudio.com]</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <figure class="piece">
+                        <a class="imgbox" href="images/WhereIsMyMother.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of Where Is My Mother">
+                            <img src="images/WhereIsMyMother.jpg" alt="A cubist painting of a man with tears on his face, surrounded by other tearful faces and angular shapes in orange, green, and red." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">Yun Gee</span>
+                            <span class="life">
+                                <span class="tbc">[1906 to 1963]</span>
+                                , China and United States
+                            </span>
+                            <span class="work">
+                                <em>Where Is My Mother</em>
+                                , 
+                                <span class="tbc">[1926 or 1926 to 1927]</span>
+                            </span>
+                            <span class="meta">Oil on canvas</span>
+                            <span class="meta">20.125 x 16 in.</span>
+                            <span class="meta">
+                                Collection of 
+                                <span class="tbc">[museum; confirm on yungee.com]</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <figure class="piece">
+                        <a class="imgbox" href="images/TheCrone.jpg" target="_blank" rel="noopener" aria-label="Open a larger image of The Crone">
+                            <img src="images/TheCrone.jpg" alt="A translucent woman in a high-collared top sits in a yellow chair against a green-gray ground, with black hair-like strands falling from above." loading="lazy">
+                        </a>
+                        <figcaption>
+                            <span class="artist">Lien Truong</span>
+                            <span class="life">
+                                b. 
+                                <span class="tbc">[year]</span>
+                                , 
+                                <span class="tbc">[country]</span>
+                            </span>
+                            <span class="work">
+                                <em>The Crone</em>
+                                , 2022
+                            </span>
+                            <span class="meta">Oil, silk and acrylic on canvas</span>
+                            <span class="meta">72 x 72 in.</span>
+                            <span class="meta">
+                                Collection of 
+                                <span class="tbc">[museum or artist; confirm on lientruong.com]</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
     </main>
