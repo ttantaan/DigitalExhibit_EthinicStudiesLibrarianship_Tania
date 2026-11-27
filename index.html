@@ -4,19 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Other Speaks: Contemporary Gothic Literature, 2023 to Present</title>
-    <meta name="description" content="For centuries, Gothic art and literature taught its audiences what to fear: the foreigner, the diseased, the stranger at the door. Works such as Dracula, Frankenstein and Fuseli's The Nightmare describe the Other from the outside.
-This exhibit reverses the view. Paired with ten contemporary novels, the paintings here keep the Gothic's tools, the buried secret, the haunted house and the unquiet dead, but they are made by artists and writers from the communities the older tradition imagined as threats. In their work, ancestors and dreams are sources of knowledge, and what has been silenced comes back to speak. With an annotated reading list of ten contemporary Gothic books by authors from communities that older Gothic literature cast as threats.">
+    <meta name="description" content="An annotated reading list of ten contemporary Gothic books by authors from communities that older Gothic literature cast as threats.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
     <style>
     :root {
-        --black: #000;
-        --ash: #cfc8b8;
-        --bone: #e8e1d0;
-        --slate: #7d8b92;
-        --blood: #7a1f1f;
-        --candle: #b5935a;
+        --black: #0c0a08;
+        --ash: #d9cdb4;
+        --bone: #efe5cd;
+        --slate: #a09580;
+        --blood: #c8402a;
+        --candle: #c4a574;
         --blackletter: "UnifrakturCook", "Old English Text MT", "Luminari", serif;
         --serif: "IM Fell English", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
     }
@@ -113,33 +112,18 @@ This exhibit reverses the view. Paired with ten contemporary novels, the paintin
         overflow: hidden
     }
 
-    .moon {
-        width: min(13rem, 48vw);
-        aspect-ratio: 1;
-        border-radius: 50%;
-        margin: 0 auto 2.4rem;
-        position: relative;
+    .cover {
+        margin: 0 auto 2.6rem;
+        width: min(26rem, 82vw);
         opacity: 0;
-        animation: rise 3.2s ease-out .3s forwards;
-        background: radial-gradient(circle at 38% 36%, #e6e0d0 0%, #aaa594 38%, #5e6064 72%, #1a1b1d 100%);
-        box-shadow: 0 0 90px 10px rgba(180, 175, 160, .16)
+        animation: rise 3.2s ease-out .3s forwards
     }
 
-    .moon::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 50%;
-        background: radial-gradient(circle at 62% 30%, rgba(0, 0, 0, .22) 0 7%, transparent 8%), radial-gradient(circle at 34% 62%, rgba(0, 0, 0, .2) 0 10%, transparent 11%), radial-gradient(circle at 70% 68%, rgba(0, 0, 0, .16) 0 5%, transparent 6%)
-    }
-
-    .branches {
-        position: absolute;
-        left: 50%;
-        top: 4.2rem;
-        width: min(30rem, 95vw);
-        transform: translateX(-50%);
-        pointer-events: none
+    .cover img {
+        display: block;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 0 90px 6px rgba(200, 64, 42, .2), 0 0 0 1px #3a2a20
     }
 
     @keyframes rise {
@@ -160,7 +144,7 @@ This exhibit reverses the view. Paired with ten contemporary novels, the paintin
         font-size: clamp(3rem, 10vw, 5.6rem);
         line-height: 1.05;
         color: var(--bone);
-        text-shadow: 0 0 28px rgba(122, 31, 31, .55)
+        text-shadow: 0 0 28px rgba(200, 64, 42, .45)
     }
 
     .hero h1 {
@@ -215,8 +199,8 @@ This exhibit reverses the view. Paired with ten contemporary novels, the paintin
     .rule::before, .rule::after {
         content: "";
         flex: 1;
-        border-top: 1px solid #3a1515;
-        border-bottom: 1px solid #3a1515;
+        border-top: 1px solid #43221a;
+        border-bottom: 1px solid #43221a;
         padding-top: 3px
     }
 
@@ -282,17 +266,17 @@ This exhibit reverses the view. Paired with ten contemporary novels, the paintin
     .books {
         list-style: none;
         margin-top: 1rem;
-        border-top: 1px solid #2a2a2a
+        border-top: 1px solid #2e2820
     }
 
     .books li {
         padding: 1.8rem .2rem;
-        border-bottom: 1px solid #2a2a2a;
+        border-bottom: 1px solid #2e2820;
         transition: background .4s
     }
 
     .books li:hover {
-        background: linear-gradient(90deg, rgba(122, 31, 31, .2), transparent 70%)
+        background: linear-gradient(90deg, rgba(200, 64, 42, .16), transparent 70%)
     }
 
     .title {
@@ -361,7 +345,7 @@ This exhibit reverses the view. Paired with ten contemporary novels, the paintin
             transition: none !important
         }
 
-        .moon, .hero h1, .tag, .byline {
+        .cover, .hero h1, .tag, .byline {
             opacity: 1
         }
     }
@@ -383,15 +367,9 @@ This exhibit reverses the view. Paired with ten contemporary novels, the paintin
 
     <main>
         <div class="hero">
-            <svg class="branches" viewBox="0 0 480 240" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" aria-hidden="true">
-                <path d="M-10 210 C60 170 110 150 170 120 S270 70 330 78 440 40 490 20"/>
-                <path d="M120 150 C110 110 120 80 98 40"/>
-                <path d="M180 118 C200 90 190 60 214 30"/>
-                <path d="M270 80 C285 52 270 30 292 6"/>
-                <path d="M330 78 C352 100 380 104 410 130"/>
-                <path d="M60 176 C40 160 22 150 4 120"/>
-            </svg>
-            <div class="moon" role="img" aria-label="A pale moon"></div>
+            <figure class="cover">
+                <img src="images/gothic-home.png" alt="A veiled figure in a pale robe with long black hair stands bowed in a barren landscape beneath a gnarled, cactus-like tree and a red sun. A small chapel with flame shapes on its roof, an arched gateway with distant hooded figures, and a bolt of lightning fill the background.">
+            </figure>
             <h1>The Other Speaks</h1>
             <p class="byline">An annotated book list by Tania Jimenez Davalos, Ethnic Librarianship</p>
         </div>
